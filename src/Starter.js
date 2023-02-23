@@ -8,8 +8,6 @@ import {useNavigate} from 'react-router-dom';
 
 function GameStart() {
 
-  
-
     const navigate = useNavigate();
         
     const twoPlayers = () => {
@@ -29,25 +27,17 @@ function GameStart() {
             });
         }
     }
-
-    
     
     const [chooseX, setChooseX] = useState(false);
     
-    
-    console.log(chooseX);
     const PickedX = () => {
         
         setChooseX(true);
-        
-
     }
 
     const PickedO = () => {
 
-        
-        setChooseX(false);
-        
+        setChooseX(false);  
     }
 
     return (
@@ -61,14 +51,11 @@ function GameStart() {
                     <div className='picker'>
                         <button onClick={PickedX} 
                         
-                        
                         className='buttonX' style={{ backgroundColor: chooseX ? "#A8BFC9" : "#1A2A33" }}>
                             
                             <img style={{ filter: chooseX ? "brightness(25%)" : "grayscale(100%) brightness(150%)" }} className='X' src={pickX} alt="X"/>
                         
                         </button>
-
-
 
                         <button onClick={PickedO}
                         
@@ -90,13 +77,7 @@ function GameStart() {
                     <button className='vsplayer' onClick={twoPlayers} >NEW GAME  (VS PLAYER)</button>
                 </div>
             
-
-            
             </div>
-
-          
-
-           
         </> 
     );
 

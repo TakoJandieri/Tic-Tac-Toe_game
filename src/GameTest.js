@@ -14,7 +14,6 @@ function Board() {
 
   const [squares, setSquares] = useState(Array(9).fill(null));
   
-
   let ref = useRef(0);
 
   const navigateToStarter = useNavigate();
@@ -40,9 +39,7 @@ function Board() {
     setX(!x); 
 
     ref.current = ref.current + 1;
-    // console.log('You clicked ' + ref.current + ' times!');
   }
-
 
   const winner = calculateWinner(squares);
 
@@ -56,14 +53,13 @@ function Board() {
     src: <img className="symbol" style={{width: '40px'}} key="456" src={pickO} alt="O" />,
   };
 
-  //Gamarjvebulis dasaxeleba >> Amushavda esec :D
+  //Gamarjvebulis dasaxeleba >>
   
   let status;
 
   if (winner) {
     status = winner;
   }
-
  
   // shemdegi simbolo rac unda daiweros tavze visi svlaa
   let nextTurn;
@@ -73,7 +69,7 @@ function Board() {
     nextTurn = <img className="xsymbol" key="456" src={pickO} alt="O" />;
   }
 
-  //Tamashis darestarteba >> Amushavda :D
+  //Tamashis darestarteba >>
 
   function Restart() {
     setX(true);
@@ -106,7 +102,6 @@ function Board() {
           if (ref.current === 9){
             return <div className="result">
 
-
                     <div className="statusBar1">
                         
                             <p className="tiewinner">ROUND TIED</p>
@@ -127,7 +122,6 @@ function Board() {
         }
     }
         
-   
   const [state, dispatch] = useReducer(reducer, initialState);
 
   function handleDispatch (){
@@ -206,8 +200,7 @@ function Board() {
             </div>
 
             <Result nextRoundClick={handleDispatch}/>
-           
-            
+               
             <div 
             style={{
                 display: 'flex',
@@ -226,7 +219,6 @@ function Board() {
 }
 
 export default Board;
-
 
 function Square({ value, onSquareClick }) {
   return (

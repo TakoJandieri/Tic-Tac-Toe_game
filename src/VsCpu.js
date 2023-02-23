@@ -7,7 +7,6 @@ import restart from "./assets/icon-restart.svg";
 import { useNavigate } from "react-router-dom";
 
 const initialState = {xcount: 0, tie: 0, lose: 0};
-// const initialMove = {nextSquares: Array(9).fill(null)};
 
 function VsCpu() {
   const [x, setX] = useState(true);
@@ -16,13 +15,10 @@ function VsCpu() {
 
   let ref = useRef(0);
 
-  
-
   const navigateToStarter = useNavigate();
   const handleQuitClick = () => {
     navigateToStarter('/');
   }
-
 
   function handleClick(i) {
     if (squares[i] || calculateWinner(squares)) {
@@ -45,28 +41,24 @@ function VsCpu() {
   
   
   
-useEffect (() => {
-  const cpuTurn = squares.filter(square => square !== null).length % 2 === 1;
+  useEffect (() => {
+    const cpuTurn = squares.filter(square => square !== null).length % 2 === 1;
 
-  
-
-  if (cpuTurn && !calculateWinner(squares)) {
-    const emptyIndexes = squares.map((square, index) => square === null ? index : null).filter(val => val !== null);
-    const randomIndex = emptyIndexes[ Math.ceil(Math.random()*emptyIndexes.length)];
-    const putCpuAt = index => {
-      let nextSquares = squares.slice();
-      nextSquares[index] = <img className="symbol" style={{width: '40px'}} key="456" src={pickO} alt="O" />;
-      setSquares(nextSquares);
-    };
-  
-    putCpuAt(randomIndex);
     
-  }
 
-  
-}, [squares]);
-  
-  console.log('meramdene daweraa: ', ref.current);
+    if (cpuTurn && !calculateWinner(squares)) {
+      const emptyIndexes = squares.map((square, index) => square === null ? index : null).filter(val => val !== null);
+      const randomIndex = emptyIndexes[ Math.ceil(Math.random()*emptyIndexes.length)];
+      const putCpuAt = index => {
+        let nextSquares = squares.slice();
+        nextSquares[index] = <img className="symbol" style={{width: '40px'}} key="456" src={pickO} alt="O" />;
+        setSquares(nextSquares);
+      };
+    
+      putCpuAt(randomIndex);
+
+    }
+  }, [squares]);
 
   const winner = calculateWinner(squares);
 
@@ -76,7 +68,7 @@ useEffect (() => {
   const oObj =  <img className="symbol" style={{width: '40px'}} key="456" src={pickO} alt="O" />
   
 
-  //Gamarjvebulis dasaxeleba >> Amushavda esec :D
+  //Gamarjvebulis dasaxeleba >> 
   
   let status;
 
@@ -93,7 +85,7 @@ useEffect (() => {
     nextTurn = <img className="xsymbol" key="456" src={pickO} alt="O" />;
   }
 
-  //Tamashis darestarteba >> Amushavda :D
+  //Tamashis darestarteba >> 
 
   function Restart() {
     setX(true);
@@ -104,10 +96,6 @@ useEffect (() => {
     function Result({nextRoundClick}) {
         if (winner){
             return <div className="result">
-
-                        {/* <div>{(winner)?
-                            <p className="won">YOU WON!</p> : null}
-                        </div> */}
 
                         <div className="statusBar1">
 
@@ -130,7 +118,6 @@ useEffect (() => {
           if (ref.current === 5){
             return <div className="result">
 
-
                     <div className="statusBar1">
                         
                             <p className="tiewinner">ROUND TIED</p>
@@ -150,8 +137,6 @@ useEffect (() => {
           
         }
     }
-
-     
    
   const [state, dispatch] = useReducer(reducer, initialState);
 

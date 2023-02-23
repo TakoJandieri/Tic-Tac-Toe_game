@@ -37,23 +37,15 @@ function VsCpuX() {
     }
 
     setSquares(nextSquares);
-    
-   
     ref.current = ref.current + 1;
   }
-  
-  console.log('meramdene daweraa: ', ref.current);
 
   const winner = calculateWinner(squares);
-
-  // const xObj = <img className="symbol" style={{width: '40px', filter: ''}} key="123" src={pickX} alt="X" />
-  
 
   const oObj =  <img className="symbol" style={{width: '40px'}} key="456" src={pickO} alt="O" />
   
   useEffect (() => {
     const cpuTurn = squares.filter(square => square !== null).length % 2 === 0;
-
   
     if (cpuTurn && !calculateWinner(squares)) {
       const emptyIndexes = squares.map((square, index) => square === null ? index : null).filter(val => val !== null);
@@ -63,25 +55,20 @@ function VsCpuX() {
         nextSquares[index] = <img className="symbol" style={{width: '40px', filter: ''}} key="123" src={pickX} alt="X" />;
         setSquares(nextSquares);
       };
-    
+  
       putCpuAt(randomIndex);
       
     };
-
-    
+  
   }, [squares]);
     
-
-  
-
-  //Gamarjvebulis dasaxeleba >> Amushavda esec :D
+  //Gamarjvebulis dasaxeleba >>
   
   let status;
 
   if (winner) {
     status = winner;
   }
-
  
   // shemdegi simbolo rac unda daiweros tavze visi svlaa
   let nextTurn;
@@ -91,10 +78,9 @@ function VsCpuX() {
     nextTurn = <img className="xsymbol" key="456" src={pickO} alt="O" />;
   }
 
-  //Tamashis darestarteba >> Amushavda :D
+  //Tamashis darestarteba >>
 
   function Restart() {
-    // setX(true);
     setSquares(Array(9).fill(null));
     console.log("Game Restarted");
   }
@@ -102,10 +88,6 @@ function VsCpuX() {
     function Result({nextRoundClick}) {
         if (winner){
             return <div className="result">
-
-                        {/* <div>{(winner)?
-                            <p className="won">YOU WON!</p> : null}
-                        </div> */}
 
                         <div className="statusBar1">
 
@@ -128,7 +110,6 @@ function VsCpuX() {
           if (ref.current === 5){
             return <div className="result">
 
-
                     <div className="statusBar1">
                         
                             <p className="tiewinner">ROUND TIED</p>
@@ -148,8 +129,6 @@ function VsCpuX() {
           
         }
     }
-
-     
    
   const [state, dispatch] = useReducer(reducer, initialState);
 
@@ -167,10 +146,6 @@ function VsCpuX() {
     setSquares(Array(9).fill(null));
     ref.current = 0;
   }
-
-//   useEffect(() => {
-//     setX(true);
-//   },[state]);
 
   function reducer(state, action){
     
@@ -231,8 +206,7 @@ function VsCpuX() {
             </div>
 
             <Result nextRoundClick={handleDispatch}/>
-           
-            
+                    
             <div 
             style={{
                 display: 'flex',
@@ -242,8 +216,7 @@ function VsCpuX() {
                 <div className="tie">TIES <br/>{state.tie}</div>
                 <div className="owinner">O {(picked === true) ? <>(CPU)</> : <>(YOU)</>} <br/>{state.lose}</div>
             </div>
-
-              
+   
         </div>
 
       </>
@@ -251,7 +224,6 @@ function VsCpuX() {
 }
 
 export default VsCpuX;
-
 
 function Square({ value, onSquareClick }) {
   return (
