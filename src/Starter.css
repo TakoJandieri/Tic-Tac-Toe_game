@@ -1,0 +1,147 @@
+.container {
+    padding: 24px;
+}
+
+
+
+.page1 {
+    background: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+
+    padding: 24px 24px 30px 24px;
+
+    margin-top: 31.51px;
+}
+
+
+.page1 > h1 {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1px;
+    color: #A8BFC9;
+
+    margin-bottom: 0px;
+}
+
+.page1 > p {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.875px;
+    color: #A8BFC9;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+
+    margin-top: 17px;
+    margin-bottom: 0px;
+}
+
+.picker {
+    background-color: #1A2A33;
+    border-radius: 10px;
+    padding: 9px 0px 9px 0px;
+    display: flex;
+    justify-content: space-around;
+
+    align-items: center;
+    margin-top: 24px;
+
+    height: 54px;
+    
+}
+
+.buttonX {
+    border: none;
+    background-color: #1A2A33;
+    width: 132px;
+    height: 54px;
+    border-radius: 10px;
+
+    padding: 0px;
+}
+
+.buttonO {
+    border: none;
+    background-color: #1A2A33;
+    width: 132px;
+    height: 54px;
+    border-radius: 10px;
+
+    padding: 0px;
+}
+
+.X {
+    filter: grayscale(100%) brightness(150%);
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+.O {
+    /* filter: grayscale(100%) brightness(150%); */
+    width: 32px;
+    height: 32px;
+    margin: 0 auto;
+}
+
+.VS {
+    display: flex;
+    flex-direction: column;
+
+    padding: 24px;
+    margin-top: 8px;
+}
+
+.vscpu {
+    border: none;
+    background-color: #F2B137;
+    box-shadow: inset 0px -8px 0px #CC8B13;
+    border-radius: 15px;
+
+    width: 327px;
+    height: 54px;
+    margin-bottom: 16px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #1A2A33;
+
+
+}
+
+.vsplayer {
+    border: none;
+    background-color: #31C3BD;
+    box-shadow: inset 0px -8px 0px #118C87;
+    border-radius: 15px;
+
+    width: 327px;
+    height: 54px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+
+    color: #1A2A33;
+}

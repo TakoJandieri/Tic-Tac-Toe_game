@@ -1,0 +1,256 @@
+.GameContainer {
+    padding: 24px 24px 127px 24px;
+    /* margin: 0 auto; */
+    display: flex;
+    flex-direction: column;
+}
+
+
+.GameListener {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 64px;
+}
+
+.logo {
+    
+    height: 32px;
+}
+
+.nextTurn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    font-family: 'Arial';
+    color: #A8BFC9;
+
+    background-color: #1F3641;
+    box-shadow: inset 0px -4px 0px #10212A;
+    border-radius: 5px;
+
+    width: 96px;
+    height: 40px;
+}
+
+.restart {
+    background-color: #A8BFC9;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    border: none;
+}
+
+
+.square {
+    width: 96px;
+    height: 96px;
+    border: none;
+    background-color: #1F3641;
+    box-shadow: inset 0px -8px 0px #10212A;
+    border-radius: 10px;
+   
+}
+
+.board-row {
+    height: 96px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    
+}
+
+
+.statusBar1 {
+ 
+    display: flex;
+    /* margin-top: 50px; */
+    align-items: center;
+  
+}
+
+.statusButtonBar {
+    
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+
+.xsymbol {
+    width: 16px;
+    filter: grayscale(100%);
+    margin-right: 5px;
+}
+
+.result {
+    background-color: #1F3641;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin-top: 9rem;
+    margin-left: -60px;
+    width: 375px;
+    padding: 48px;
+    /* margin-left: -24px; */
+    /* margin-top: 450px; */
+  
+    
+}
+
+.resultWinner {
+    width: 32px;
+    margin-right: 8px;
+}
+
+.Takes {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.quit {
+    background-color: #A8BFC9;
+    box-shadow: inset 0px -4px 0px #6B8997;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1A2A33;
+    width: 72px;
+    height: 52px;
+}
+
+.next {
+    background-color: #F2B137;
+    box-shadow: inset 0px -4px 0px #CC8B13;
+    border-radius: 10px;
+    border: none;
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #1A2A33;
+
+    width: 146px;
+    height: 52px;
+}
+
+.xwinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #31C3BD;
+    border-radius: 10px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.875px;
+
+    /* Dark Navy */
+    color: #1A2A33;
+
+    width: 96px;
+    height: 64px;
+}
+
+.tie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #A8BFC9;
+    border-radius: 10px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.875px;
+
+    /* Dark Navy */
+    color: #1A2A33;
+
+    width: 96px;
+    height: 64px;
+}
+
+.owinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #F2B137;
+    border-radius: 10px;
+
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.875px;
+
+    /* Dark Navy */
+    color: #1A2A33;
+
+    width: 96px;
+    height: 64px;
+}
+
+.tiewinner {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-align: center;
+    letter-spacing: 1.5px;
+
+    /* Silver */
+    color: #A8BFC9;
+}
+
+.won {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 18px;
+
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.875px;
+
+    /* Silver */
+    color: #A8BFC9;
+}
