@@ -85,10 +85,6 @@ function Board() {
         if (winner){
             return <div className="result">
 
-                        {/* <div>{(winner)?
-                            <p className="won">YOU WON!</p> : null}
-                        </div> */}
-
                         <div className="statusBar1">
 
                             {status}{(winner)?
@@ -130,28 +126,6 @@ function Board() {
           
         }
     }
-
-        
-        // let thisCase = 0;
-        // if (winner && squares[0]?.key === squares[1]?.key && squares[0]?.key === squares[2]?.key){
-        //     // Square.style = {backgroundColor: 'orange'};
-        //     thisCase = 1;
-            
-        // }else if (winner && squares[3]?.key === squares[4]?.key && squares[3]?.key === squares[5]?.key){
-        //     thisCase = 2;
-        // }else if (winner && squares[6]?.key === squares[7]?.key && squares[6]?.key === squares[8]?.key){
-        //     thisCase = 3;
-        // }else if (winner && squares[0]?.key === squares[4]?.key && squares[0]?.key === squares[8]?.key){
-        //     thisCase = 4;
-        // }else if (winner && squares[2]?.key === squares[4]?.key && squares[2]?.key === squares[6]?.key){
-        //     thisCase = 5;
-        // }else if (winner && squares[0]?.key === squares[3]?.key && squares[0]?.key === squares[6]?.key){
-        //     thisCase = 6;
-        // }else if (winner && squares[1]?.key === squares[4]?.key && squares[1]?.key === squares[7]?.key){
-        //     thisCase = 7;
-        // }else if (winner && squares[2]?.key === squares[5]?.key && squares[2]?.key === squares[8]?.key){
-        //     thisCase = 8;
-        // }
         
    
   const [state, dispatch] = useReducer(reducer, initialState);
