@@ -1,4 +1,4 @@
-https://takojandieri.github.io/Tic-Tac-Toe/
+https://takojandieri.github.io/Tic-Tac-Toe_game/
 
 # Getting Started with Create React App
 
