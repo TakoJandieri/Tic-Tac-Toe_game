@@ -4,14 +4,14 @@ import logo from "./assets/logo.svg";
 import pickX from "./assets/icon-x.svg";
 import pickO from "./assets/icon-o.svg";
 import restart from "./assets/icon-restart.svg";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const initialState = {xcount: 0, tie: 0, lose: 0};
 // const initialMove = {nextSquares: Array(9).fill(null)};
 
 function VsCpuX() {
 
-
+  const picked = useLocation();
   const [squares, setSquares] = useState([null, null, null, null, <img className="symbol" style={{width: '40px', filter: ''}} key="123" src={pickX} alt="X" />, null, null, null, null]);
 
   let ref = useRef(0);
@@ -238,9 +238,9 @@ function VsCpuX() {
                 display: 'flex',
                 justifyContent: 'space-between'
                 }}>
-                <div className="xwinner">X (YOU) <br/>{state.xcount}</div>
+                <div className="xwinner">X {(picked === true) ? <>(YOU)</> : <>(CPU)</>} <br/>{state.xcount}</div>
                 <div className="tie">TIES <br/>{state.tie}</div>
-                <div className="owinner">O (CPU) <br/>{state.lose}</div>
+                <div className="owinner">O {(picked === true) ? <>(CPU)</> : <>(YOU)</>} <br/>{state.lose}</div>
             </div>
 
               

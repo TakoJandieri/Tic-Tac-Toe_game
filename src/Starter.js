@@ -21,7 +21,12 @@ function GameStart() {
             navigate('playerVScpu');
         }else{
             
-            navigate('playerVScpuX');
+            navigate('playerVScpuX', {
+                state: {
+
+                    picked: chooseX
+                }
+            });
         }
     }
 

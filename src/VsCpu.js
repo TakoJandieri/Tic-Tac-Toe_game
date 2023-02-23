@@ -55,7 +55,7 @@ useEffect (() => {
     const randomIndex = emptyIndexes[ Math.ceil(Math.random()*emptyIndexes.length)];
     const putCpuAt = index => {
       let nextSquares = squares.slice();
-      nextSquares[index] = oObj;
+      nextSquares[index] = <img className="symbol" style={{width: '40px'}} key="456" src={pickO} alt="O" />;
       setSquares(nextSquares);
     };
   
