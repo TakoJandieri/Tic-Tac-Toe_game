@@ -239,9 +239,9 @@ function Board() {
                 display: 'flex',
                 justifyContent: 'space-between'
                 }}>
-                <div className="xwinner">X (YOU) <br/>{state.xcount}</div>
+                <div className="xwinner">X (Player 1) <br/>{state.xcount}</div>
                 <div className="tie">TIES <br/>{state.tie}</div>
-                <div className="owinner">O (CPU) <br/>{state.lose}</div>
+                <div className="owinner">O (Player 2) <br/>{state.lose}</div>
             </div>
 
         
